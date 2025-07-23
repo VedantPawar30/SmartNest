@@ -247,7 +247,7 @@ export default function Home() {
                         />
                         <h3 className="font-bold text-xl mt-3">{hotel.name}</h3>
                         <p className="text-gray-600">{hotel.location}</p>
-                        <p className="text-blue-500 font-bold">{hotel.price_per_night} per night</p>
+                        <p className="text-blue-500 font-bold">₹{hotel.price_per_night} per night</p>
                         <p className="text-yellow-500">⭐ {hotel.rating}</p>
                         {/* Amenities and Booking Section - Flex container to place items side by side */}
                           <div className="flex justify-between items-center mt-2">
