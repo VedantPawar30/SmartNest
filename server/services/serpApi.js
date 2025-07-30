@@ -3,8 +3,8 @@ const { getJson } = require("serpapi");
 require('dotenv').config();
 
 const fetchHotelsFromSerpAPI = async (search, checkIn, checkOut, numAdults, budget) => {
-  const location = search || "Mumbai";
-  const budgetMin = Math.floor(budget * 0.7);
+  const location = search ;
+  const budgetMin = Math.floor(budget * 0.8);
   const budgetMax = Math.floor(budget * 1.2);
 
   try {

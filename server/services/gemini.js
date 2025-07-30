@@ -28,7 +28,9 @@ exports.getHotelRecommendations= async(allHotels,budget,preferences) =>{
             You are an expert hotel recommendation assistant.
             A user is looking for a hotel with the following preferences:
             - Required amenities: ${preferences.join(", ")}
-            - Maximum Budget : ${budget}
+            -Minimum Budget : ${Math.floor(budget * 0.8)}
+            - Maximum Budget : ${Math.floor(budget * 1.2)}
+         
 
             Analyze this list of available hotels:
             ${JSON.stringify(hotelsForPrompt, null, 2)}
@@ -47,6 +49,7 @@ exports.getHotelRecommendations= async(allHotels,budget,preferences) =>{
               },
               {
                 "hotel_name": "name of another hotel",
+                "price per night":"price per night",
                 "property_token": "another_token_here",
                 "reason": "Good value for the price, though the rating is slightly lower."
               }
